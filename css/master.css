@@ -1,0 +1,207 @@
+body, html {
+	height: 100%;
+	margin: 0;
+	background: #eee;
+	color: #333;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 12px;
+}
+a {
+	color: rgba(0,0,0,.5);
+	text-decoration: none;
+}
+body:not(.touch) a:hover {
+	color: #d70;
+}
+
+
+
+/**
+ * Draw Canvas
+ */
+#master-canvas-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100% !important;
+	height: 100% !important;
+	overflow: hidden;
+	box-sizing: border-box;
+	cursor: url(../imgs/cursor.png) 5 5, auto;
+}
+#master-canvas-wrap canvas {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+/*	border: solid 3px #0d0;*/
+}
+
+
+
+/**
+ * Kaleidoscope
+ */
+#kaleido .segment .canvas-wrap {
+	position: absolute;
+/*	border: solid 2px #d00;*/
+}
+#kaleido.rotate .segment .canvas-wrap {
+	/* Animation set in JS together with search light */
+	/*animation: rotate 21s infinite linear;*/
+	transform-origin: 50% 50%;
+}
+#kaleido .search-light,
+#kaleido .search-light svg {
+	transform-origin: 0 0;
+/*	opacity: .1;*/
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+
+/**
+ * Show original drawing option.
+ */
+#master-canvas-wrap .draw-canvas {
+	opacity: 0;
+	transition: opacity 1000ms;
+}
+#kaleido .mirror-segment {
+	transition: opacity 1000ms;
+}
+#kaleido .search-light {
+	opacity: 0;
+	transition: opacity 1000ms;
+}
+body.show-original #master-canvas-wrap .draw-canvas {
+	opacity: 1;
+}
+body.show-original #kaleido .mirror-segment {
+	opacity: .2;
+}
+body.show-original #kaleido .search-light {
+	opacity: 1;
+}
+body.show-original #center {
+	opacity: 1;
+}
+
+
+
+/**
+ * Settings
+ * General styles in settings_panel.css
+ */
+#settings {
+	z-index: 3;
+}
+
+
+
+/**
+ * Instructions
+ */
+#center {
+	width: 13px;
+	height: 13px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAJElEQVQYV2NkwAT/GRgYGJGFUThQCRorAhmPFwyAm9DdgxEEAORECQlt3qIUAAAAAElFTkSuQmCC) center center repeat;
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	z-index: 1;
+	margin: -7px 0 0 -7px;
+	opacity: .5;
+	pointer-events: none;
+	transition: opacity 500ms;
+}
+#instructions {
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	margin: -90px 0 0 -60px;
+	text-align: center;
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 12px;
+	opacity: .7;
+	transition: opacity 500ms;
+}
+#instructions::after {
+	content: '';
+	display: block;
+	width: 24px;
+	height: 40px;
+	background: url(../imgs/arrow.svg) 0 0 no-repeat;
+	position: absolute;
+	top: 25px;
+	left: 80px;
+}
+#instructions.hide,
+#center.hide {
+	opacity: 0;
+}
+
+
+
+/**
+ * About me
+ */
+#about-me {
+	width: 300px;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin: 0 0 0 -150px;
+	text-align: center;
+}
+#about-me .name {
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+}
+#about-me .subtitle {
+	font-size: 13px;
+	text-transform: uppercase;
+}
+#about-me .subtitle .heart {
+	font-family: Georgia, serif;
+}
+#about-me .contact {
+	position: relative;
+	z-index: 3;
+	color: rgba(0,0,0,.5);
+	transition: opacity 1000ms;
+	font-size: 13px;
+}
+#about-me.hide-contact .contact {
+	opacity: 0;
+}
+#settings.open + #about-me .contact {
+	z-index: 0;
+}
+
+
+/**
+ * Hide settings and about ui as you draw
+ * so you can draw over ui.
+ */
+#settings,
+#about-me {
+	transition: opacity 500ms;
+}
+#settings.hide,
+#about-me.hide {
+	pointer-events: none;
+	opacity: .1;
+}

@@ -1,0 +1,47 @@
+body, html {
+	height: 100%;
+	margin: 0;
+}
+#kaleido-wrap {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+#kaleido {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(50%) translateY(45%);
+}
+#kaleido .mirror-segment {
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+#kaleido .segment {
+	width: 1000px; /* Size will be adjusted in JS */
+	height: 1000px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+  -webkit-clip-path: url(#clip-path);
+	clip-path: url(#clip-path);
+	overflow: hidden;
+/*	border: solid 1px rgba(255,255,255,.5);*/
+}
+
+/* To show what's being clipped */
+#kaleido.dont-clip .segment {
+	overflow: visible;
+}
+
+/* Seams */
+#kaleido-wrap:not(.show-seams) .seams {
+	display: none;
+}

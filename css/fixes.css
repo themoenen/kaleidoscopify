@@ -1,0 +1,47 @@
+/* Normalize iPhone buttons */
+input[type=text] {
+	-webkit-appearance: none;
+}
+input[type=textarea] {
+	-webkit-appearance: none;
+}
+input[type=button] {
+	-webkit-appearance: none;
+}
+input[type=submit] {
+	-webkit-appearance: none;
+}
+
+img {
+	/* For IE old habit */
+	border: none;
+	/* To rid the 3px bottom margin in HTML5 */
+	display: block;
+}
+
+p {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+* {
+	/* For ugly blue boxes around inputs and more */
+	outline: none;
+	/* For ugly highlighting of links when yo tap them */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* Firefox sliders */
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+	border: none;
+}
+
+form {
+	border-style: none;
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+}
