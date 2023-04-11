@@ -3,10 +3,10 @@
  */
 
 #settings {
-	font-family: Arial, Helvetica, sans-serif;
-	text-transform: uppercase;
+	font-family: 'Barlow', sans-serif;
+	/* text-transform: uppercase; */
 	position: absolute;
-	letter-spacing: .5px;
+	letter-spacing: 0.5px;
 	width: 160px;
 	top: 25px;
 	left: 30px;
@@ -15,7 +15,7 @@
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-/*	background: rgba(255,255,255,.8) !important;*/
+	/*	background: rgba(255,255,255,.8) !important;*/
 }
 
 /* Title */
@@ -27,17 +27,13 @@
 	position: relative;
 	cursor: pointer;
 	width: 100%;
-	
-}
-body:not(.touch) #settings .title:hover {
-	font-weight: bold;
 }
 #settings .title::before {
 	content: '';
 	display: block;
 	width: 0;
 	height: 2px;
-	background: rgba(0,0,0,.1);
+	background: rgba(0, 0, 0, 0.1);
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -53,18 +49,17 @@ body:not(.touch) #settings .title:hover {
 	right: 0;
 	background: url(../imgs/close.svg) center center;
 	opacity: 0;
-	transform: rotate(45deg) scale(.7);
+	transform: rotate(45deg) scale(0.7);
 	transition: opacity 200ms;
 	transition-delay: 0;
 }
-
 
 /* Open/close states */
 #settings.open {
 	top: 10px;
 	left: 10px;
 	padding: 15px 20px;
-	background: rgba(238,238,238,.9);
+	background: rgba(238, 238, 238, 0.9);
 }
 #settings.open .title {
 	margin-bottom: 20px;
@@ -74,7 +69,7 @@ body:not(.touch) #settings .title:hover {
 	width: 100%;
 }
 #settings.open .title::after {
-	opacity: .7;
+	opacity: 0.7;
 	transition-delay: 200ms;
 }
 #settings:not(.open) .content {
@@ -82,7 +77,7 @@ body:not(.touch) #settings .title:hover {
 	left: -220px;
 	height: 0;
 	overflow: hidden;
-/*	display: none;*/
+	/*	display: none;*/
 }
 
 /* Animating in the different rows */
@@ -124,10 +119,6 @@ body:not(.touch) #settings .title:hover {
 	transition-delay: 270ms;
 }
 
-
-
-
-
 /**
  * UI elements
  */
@@ -139,11 +130,11 @@ body:not(.touch) #settings .title:hover {
 	margin: 5px 0;
 	float: left;
 	clear: left;
-/*	background: #ddd;*/
+	/*	background: #ddd;*/
 }
 
 /* Button */
-input[type=button] {
+input[type='button'] {
 	height: 28px;
 	line-height: 25px;
 	padding: 0 10px;
@@ -158,15 +149,11 @@ input[type=button] {
 	clear: left;
 	cursor: pointer;
 }
-body:not(.touch) input[type=button]:hover {
-	background: #333;
-}
-
 
 /**
  * Checkboxes
  */
-input[type=checkbox] {
+input[type='checkbox'] {
 	display: none;
 }
 #settings label.cb {
@@ -189,14 +176,6 @@ label.cb span::after {
 	background-position: -20px 0;
 }
 
-/* Hover state */
-body:not(.touch) label.cb:hover :not(:checked) + span::after {
-	background-position: 0 -20px;
-}
-body:not(.touch) .dark-ui label.cb:hover :not(:checked) + span::after {
-	background-position: -20px -20px;
-}
-
 /* Checked state */
 label.cb :checked + span::after {
 	background-position: 0 -40px;
@@ -207,138 +186,118 @@ label.cb :checked + span::after {
 
 /* Disabled state */
 label.cb :disabled + span {
-	opacity: .4;
+	opacity: 0.4;
 	cursor: default;
 }
 label.cb :disabled + span::after {
-	opacity: .5;
+	opacity: 0.5;
 }
-
-/* hover non-checked */
-body:not(.touch) label.cb :disabled + span:hover::after {
-	background-position: 0 -0;
-}
-body:not(.touch) .dark-ui label.cb :disabled + span:hover::after {
-	background-position: -20px 0;
-}
-
-/* hover checked */
-body:not(.touch) label.cb :disabled:checked + span:hover::after {
-	background-position: 0 -40px;
-}
-body:not(.touch) .dark-ui label.cb :disabled:checked + span:hover::after {
-	background-position: -20px -40px;
-}
-
 
 /**
  * Sliders
  */
 
-input[type=range] {
+input[type='range'] {
 	display: block;
 	margin: 0 0 20px 0;
 	width: 100%;
 }
 
 /* Reset browser styles */
-input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
+input[type='range'] {
+	-webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+	width: 100%; /* Specific width is required for Firefox. */
 }
 
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
 }
 
-input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+input[type='range']:focus {
+	outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
-input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-  background: transparent; /* Hides the slider so custom styles can be added */
-  border-color: transparent;
-  color: transparent;
+input[type='range']::-ms-track {
+	width: 100%;
+	cursor: pointer;
+	background: transparent; /* Hides the slider so custom styles can be added */
+	border-color: transparent;
+	color: transparent;
 }
-
 
 /* Track */
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  background: #666;
-  border-radius: 2px;
+input[type='range']::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	background: #666;
+	border-radius: 2px;
 }
-input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  background: #666;
-  border-radius: 2px;
+input[type='range']::-moz-range-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	background: #666;
+	border-radius: 2px;
 }
-input[type=range]::-ms-track {
-  width: 100%;
-  height: 4px;
-  cursor: pointer;
-  background: #666;
-  border-radius: 2px;
+input[type='range']::-ms-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	background: #666;
+	border-radius: 2px;
 }
 
-input[type=range]:active::-webkit-slider-runnable-track {
-  background: #d70;
+input[type='range']:active::-webkit-slider-runnable-track {
+	background: #d70;
 }
-input[type=range]:active::-moz-range-track {
-  background: #d70;
+input[type='range']:active::-moz-range-track {
+	background: #d70;
 }
-input[type=range]::-ms-track {
+input[type='range']::-ms-track {
 	background: #d70;
 }
 
-
 /* Thumb */
 /* Special styling for WebKit/Blink */
-input[type=range]::-webkit-slider-thumb {
-  border: 2px solid #666;
-  height: 20px;
-  width: 20px;
+input[type='range']::-webkit-slider-thumb {
+	border: 2px solid #666;
+	height: 20px;
+	width: 20px;
 	box-sizing: border-box;
-  border-radius: 10px;
-  background: #fff;
-  cursor: pointer;
-/*	margin-left: -10px;*/
-  margin: -8px 0;
+	border-radius: 10px;
+	background: #fff;
+	cursor: pointer;
+	/*	margin-left: -10px;*/
+	margin: -8px 0;
 }
 
 /* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-  border: 2px solid #666;
-  height: 20px;
-  width: 20px;
+input[type='range']::-moz-range-thumb {
+	border: 2px solid #666;
+	height: 20px;
+	width: 20px;
 	box-sizing: border-box;
-  border-radius: 10px;
-  background: #fff;
-  cursor: pointer;
-  margin: -8px;
+	border-radius: 10px;
+	background: #fff;
+	cursor: pointer;
+	margin: -8px;
 }
 
 /* All the same stuff for IE */
-input[type=range]::-ms-thumb {
-  border: 2px solid #666;
-  height: 20px;
-  width: 20px;
+input[type='range']::-ms-thumb {
+	border: 2px solid #666;
+	height: 20px;
+	width: 20px;
 	box-sizing: border-box;
-  border-radius: 10px;
-  background: #fff;
-  cursor: pointer;
-  margin: -8px;
+	border-radius: 10px;
+	background: #fff;
+	cursor: pointer;
+	margin: -8px;
 }
 
-
 /* Mobile screens */
-@media only screen and (max-width : 400px) {
+@media only screen and (max-width: 400px) {
 	#settings {
 		top: 15px;
 		left: 20px;
@@ -360,5 +319,35 @@ input[type=range]::-ms-thumb {
 	#settings .title::after {
 		transition: none;
 	}
-		
+}
+
+@media (hover: hover) {
+	/* Button */
+	input[type='button']:hover {
+		background: #333;
+	}
+
+	/* Checkboxes */
+	label.cb:hover :not(:checked) + span::after {
+		background-position: 0 -20px;
+	}
+	.dark-ui label.cb:hover :not(:checked) + span::after {
+		background-position: -20px -20px;
+	}
+
+	/* hover non-checked */
+	/* label.cb :disabled + span:hover::after {
+		background-position: 0 -0;
+	}
+	.dark-ui label.cb :disabled + span:hover::after {
+		background-position: -20px 0;
+	} */
+
+	/* hover checked */
+	/* label.cb :disabled:checked + span:hover::after {
+		background-position: 0 -40px;
+	}
+	.dark-ui label.cb :disabled:checked + span:hover::after {
+		background-position: -20px -40px;
+	} */
 }

@@ -1,131 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<link rel="shortcut icon" href="/favicon.png">
-	<title>Shapish</title>
-	
-	
-	<!-- Search engines -->
-	<meta name="description" content="Moenen Erbuer is an Interactive Designer &amp; Creative  Coder.">
-	<meta name="keywords" content="css,kaleidoscope,javscript,jquery,script,design">
-	<!-- Google Plus -->
-	<meta itemprop="name" content="Shapish | Design &hearts; Code">
-	<meta itemprop="description" content="Moenen Erbuer is an Interactive Designer &amp; Creative  Coder.">
-	<meta itemprop="image" content="http://shapish.com/imgs/shapish_kaleidoscope_cover.jpg">
-	<!-- Twitter -->
-	<meta name="twitter:card" content="Design &hearts; Code | Moenen Erbuer">
-	<meta name="twitter:title" content="Shapish | Design &hearts; Code">
-	<meta name="twitter:description" content="Moenen Erbuer is an Interactive Designer &amp; Creative  Coder.">
-	<meta name="twitter:creator" content="@themoenen">
-	<meta name="twitter:image:src" content="http://shapish.com/imgs/shapish_kaleidoscope_cover.jpg">
-	<!-- Open Graph General (Facebook & Pinterest) -->
-	<meta property="og:url" content="http://shapish.com/">
-	<meta property="og:title" content="Shapish | Design &hearts; Code">
-	<meta property="og:description" content="Moenen Erbuer is an Interactive Designer &amp; Creative  Coder.">
-	<meta property="og:site_name" content="Shapish">
-	<meta property="og:image" content="http://shapish.com/imgs/shapish_kaleidoscope_cover.jpg">
-	<meta property="og:type" content="profile">
-	<!-- Open Graph Article (Facebook & Pinterest) -->
-	<meta property="article:tag" content="kaleidoscope, design, code">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="/favicon.png" />
+		<title>Shapish</title>
 
-	
-	<link rel="stylesheet" type="text/css" href="css/master.css">
-	<link rel="stylesheet" type="text/css" href="css/fixes.css">
-	<link rel="stylesheet" type="text/css" href="css/kaleidoscope.css">
-	<link rel="stylesheet" type="text/css" href="css/settings_panel.css">
-	<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400|Playfair+Display:900' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="js/third_party/jquery.js"></script>
-	<script type="text/javascript" src="js/third_party/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/third_party/js.cookie.js"></script>
-	<script type="text/javascript" src="js/third_party/screenfull.js"></script>
-	<script type="text/javascript" src="js/kaleidoscope.js"></script>
-	<script type="text/javascript" src="js/jquery.transitionend.js"></script>
-	<script type="text/javascript" src="js/jquery.imgload.js"></script>
-	<script type="text/javascript" src="js/scrollcatch.js"></script>
-	<script type="text/javascript" src="js/smooth_draw.js"></script>
-	<script type="text/javascript" src="js/kaleidoscopify.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			new Kaleidoscopify();
-		});
+		<!-- Search engines -->
+		<meta name="description" content="Moenen Erbuer is an Interactive Designer &amp; Creative  Coder." />
+		<meta name="keywords" content="css,kaleidoscope,javscript,jquery,script,design" />
+		<!-- Google Plus -->
+		<meta itemprop="name" content="Shapish | Design &hearts; Code" />
+		<meta itemprop="description" content="Moenen Erbuer is an Interactive Designer &amp; Creative  Coder." />
+		<meta itemprop="image" content="http://shapish.com/imgs/shapish_kaleidoscope_cover.jpg" />
+		<!-- Twitter -->
+		<meta name="twitter:card" content="Design &hearts; Code | Moenen Erbuer" />
+		<meta name="twitter:title" content="Shapish | Design &hearts; Code" />
+		<meta name="twitter:description" content="Moenen Erbuer is an Interactive Designer &amp; Creative  Coder." />
+		<meta name="twitter:creator" content="@themoenen" />
+		<meta name="twitter:image:src" content="http://shapish.com/imgs/shapish_kaleidoscope_cover.jpg" />
+		<!-- Open Graph General (Facebook & Pinterest) -->
+		<meta property="og:url" content="http://shapish.com/" />
+		<meta property="og:title" content="Shapish | Design &hearts; Code" />
+		<meta property="og:description" content="Moenen Erbuer is an Interactive Designer &amp; Creative  Coder." />
+		<meta property="og:site_name" content="Shapish" />
+		<meta property="og:image" content="http://shapish.com/imgs/shapish_kaleidoscope_cover.jpg" />
+		<meta property="og:type" content="profile" />
+		<!-- Open Graph Article (Facebook & Pinterest) -->
+		<meta property="article:tag" content="kaleidoscope, design, code" />
 		
-		// Google Analytics.
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-12518409-3']);
-	  _gaq.push(['_trackPageview']);
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Cormorant+Garamond&display=swap" rel="stylesheet">
 		
-	</script>
-</head>
-<body>
-	<div id="instructions">scribble something here</div>
-	<div id="center"></div>
-	
-	<div id="settings">
-		<div class="title">Settings</div>
-		<div class="content">
-			<div class="item">
-				<label>Segments: <span class="value">10<span></label>
-				<input type="range" class="slider-segments" value="10" min="2" max="30">
+		<link rel="stylesheet" type="text/css" href="css/master.css" />
+		<link rel="stylesheet" type="text/css" href="css/fixes.css" />
+		<link rel="stylesheet" type="text/css" href="css/kaleidoscope.css" />
+		<link rel="stylesheet" type="text/css" href="css/settings_panel.css" />
+		<script type="text/javascript" src="js/third_party/jquery.js"></script>
+		<script type="text/javascript" src="js/third_party/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/third_party/js.cookie.js"></script>
+		<script type="text/javascript" src="js/third_party/screenfull.js"></script>
+		<script type="text/javascript" src="js/kaleidoscope.js"></script>
+		<script type="text/javascript" src="js/jquery.transitionend.js"></script>
+		<script type="text/javascript" src="js/jquery.imgload.js"></script>
+		<script type="text/javascript" src="js/scrollcatch.js"></script>
+		<script type="text/javascript" src="js/smooth_draw.js"></script>
+		<script type="text/javascript" src="js/kaleidoscopify.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				new Kaleidoscopify()
+			})
+		</script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0P03CCT7X9"></script>
+		<script>
+			window.dataLayer = window.dataLayer || []
+			// prettier-ignore
+			function gtag() { dataLayer.push(arguments) }
+			gtag('js', new Date())
+			gtag('config', 'G-0P03CCT7X9')
+		</script>
+	</head>
+	<body>
+		<div id="instructions">scribble something here</div>
+		<div id="center"></div>
+
+		<div id="settings">
+			<div class="title link">SETTINGS</div>
+			<div class="content">
+				<div class="item">
+					<label>Segments: <span class="value">10</span></label>
+					<input type="range" class="slider-segments" value="10" min="2" max="30" />
+				</div>
+
+				<div class="item">
+					<label>Speed: <span class="value">80</span></label>
+					<input type="range" class="slider-speed" value="80" />
+				</div>
+				<div class="item">
+					<label>Line Width: <span class="value">2</span></label>
+					<input type="range" class="slider-line-width" min="1" max="20" value="2" />
+				</div>
+				<label class="item cb">
+					<input type="checkbox" class="cb-use-color" />
+					<span>Use Color</span>
+				</label>
+				<label class="item cb">
+					<input type="checkbox" class="cb-seams" />
+					<span>Show Seams</span>
+				</label>
+				<label class="item cb">
+					<input type="checkbox" class="cb-rotate" checked />
+					<span>Rotate</span>
+				</label>
+				<label class="item cb">
+					<input type="checkbox" class="cb-clip" checked />
+					<span>Clip</span>
+				</label>
+				<label class="item cb">
+					<input type="checkbox" class="cb-original" />
+					<span>Show Original</span>
+				</label>
+				<div class="item">
+					<input type="button" value="clear canvas" class="btn-clear" />
+				</div>
+				<label class="item">
+					<a href="#" class="reset-values">Reset Values</a>
+				</label>
 			</div>
-			<div class="item">
-				<label>Speed: <span class="value">80<span></label>
-				<input type="range" class="slider-speed" value="80">
-			</div>
-			<div class="item">
-				<label>Line Width: <span class="value">2<span></label>
-				<input type="range" class="slider-line-width" min="1" max="20" value="2">
-			</div>
-			<label class="item cb">
-				<input type="checkbox" class="cb-use-color">
-				<span>Use Color</span>
-			</label>
-			<label class="item cb">
-				<input type="checkbox" class="cb-seams">
-				<span>Show Seams</span>
-			</label>
-			<label class="item cb">
-				<input type="checkbox" class="cb-rotate" checked>
-				<span>Rotate</span>
-			</label>
-			<label class="item cb">
-				<input type="checkbox" class="cb-clip" checked>
-				<span>Clip</span>
-			</label>
-			<label class="item cb">
-				<input type="checkbox" class="cb-original">
-				<span>Show Original</span>
-			</label>
-			<div class="item">
-				<input type="button" value="clear canvas" class="btn-clear">
-			</div>
-			<label class="item">
-				<a href="#" class="reset-values">Reset Values</a>
-			</label>
 		</div>
-	</div>
-	
-	<div id="about-me" class="hide-contact">
-		<div class="subtitle">Code <span class="heart">&nbsp;&hearts;&nbsp;</span> Design</div>
-		<div class="name">Moenen Erbuer</div>
-		<div class="contact">
-			<a href="mailto:moenen@shapish.com" class="email">moenen@shapish.com</a> &nbsp;&nbsp; <a href="tel:1-347-850-2007">+1 347 850 2007</a><br/>
-			<a target="_blank" href="http://portfolio.shapish.com">Portfolio</a> &nbsp;&nbsp; <a target="_blank" href="https://arthur.io/themoenen">Arthur</a> &nbsp;&nbsp; <a target="_blank" href="http://www.linkedin.com/in/themoenen">LinkedIn</a>
-			<!-- &nbsp;&nbsp; <a target="_blank" href="http://github.com/shapish/kaleidoscopify">github</a> -->
+
+		<!-- prettier-ignore -->
+		<div id="about-me">
+			<div class="subtitle">Art  <span class="heart">&nbsp;&hearts;&nbsp;</span> Design  <span class="heart">&nbsp;&hearts;&nbsp;</span> UX <span class="heart">&nbsp;&hearts;&nbsp;</span> Code</div>
+			<h1 class="name">Moenen Erbuer</h1>
+			<p class="text-main">
+				I'm an independent full-stack software designer.<br class="res-1">
+				<br class="res-1">
+				I'm the founder of <a target="_blank" href="https://arthur.io/themoenen">Arthur.io</a>, an image curation platform with a focus on art &amp; design.<br class="res-2">
+				I also work for <a target="_blank" href="https://research.ibm.com/">IBM Research</a>, where I help design the scientific tools of tomorrow.
+			</p>
+			<p class="text-compact">
+				I'm an independent full-stack software designer, the founder of <a target="_blank" href="https://arthur.io/themoenen">Arthur.io</a>, an image curation platform with a focus on art &amp; design, and I also work for <a target="_blank" href="https://research.ibm.com/">IBM Research</a>, where I help design the scientific tools of tomorrow.
+			</p>
+			<div class="links">
+				<a target="_blank" href="https://arthur.io/themoenen">Arthur.io</a>
+				<a target="_blank" href="http://www.linkedin.com/in/themoenen">LinkedIn</a>
+				<a target="_blank" href="http://github.com/themoenen/kaleidoscopify">GitHub</a>
+				<a target="_blank" href="mailto:moenen@shapish.com" class="email">Contact</a>
+				<!-- <a href="tel:1-347-850-2007">+1 347 850 2007</a> -->
+				<!-- <a target="_blank" href="http://portfolio.shapish.com">Portfolio</a> &nbsp;&nbsp; -->
+			</div>
 		</div>
-	</div>
-	
-	<div id="kaleido-content">
-		<div class="canvas-wrap">
-			<canvas></canvas>
+
+		<div id="kaleido-content">
+			<div class="canvas-wrap">
+				<canvas></canvas>
+			</div>
 		</div>
-	</div>
-	
-</body>
+	</body>
 </html>

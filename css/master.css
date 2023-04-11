@@ -1,20 +1,17 @@
-body, html {
+body,
+html {
 	height: 100%;
 	margin: 0;
 	background: #eee;
 	color: #333;
-	font-family: 'Alegreya Sans', sans-serif;
-	font-size: 12px;
+	font-family: 'Barlow', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
 }
 a {
-	color: rgba(0,0,0,.5);
+	color: #920;
 	text-decoration: none;
 }
-body:not(.touch) a:hover {
-	color: #d70;
-}
-
-
 
 /**
  * Draw Canvas
@@ -34,17 +31,15 @@ body:not(.touch) a:hover {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-/*	border: solid 3px #0d0;*/
+	/*	border: solid 3px #0d0;*/
 }
-
-
 
 /**
  * Kaleidoscope
  */
 #kaleido .segment .canvas-wrap {
 	position: absolute;
-/*	border: solid 2px #d00;*/
+	/*	border: solid 2px #d00;*/
 }
 #kaleido.rotate .segment .canvas-wrap {
 	/* Animation set in JS together with search light */
@@ -54,7 +49,7 @@ body:not(.touch) a:hover {
 #kaleido .search-light,
 #kaleido .search-light svg {
 	transform-origin: 0 0;
-/*	opacity: .1;*/
+	/*	opacity: .1;*/
 }
 
 @keyframes rotate {
@@ -65,8 +60,6 @@ body:not(.touch) a:hover {
 		transform: rotate(360deg);
 	}
 }
-
-
 
 /**
  * Show original drawing option.
@@ -86,7 +79,7 @@ body.show-original #master-canvas-wrap .draw-canvas {
 	opacity: 1;
 }
 body.show-original #kaleido .mirror-segment {
-	opacity: .2;
+	opacity: 0.2;
 }
 body.show-original #kaleido .search-light {
 	opacity: 1;
@@ -94,8 +87,6 @@ body.show-original #kaleido .search-light {
 body.show-original #center {
 	opacity: 1;
 }
-
-
 
 /**
  * Settings
@@ -105,21 +96,20 @@ body.show-original #center {
 	z-index: 3;
 }
 
-
-
 /**
  * Instructions
  */
 #center {
 	width: 13px;
 	height: 13px;
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAJElEQVQYV2NkwAT/GRgYGJGFUThQCRorAhmPFwyAm9DdgxEEAORECQlt3qIUAAAAAElFTkSuQmCC) center center repeat;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAJElEQVQYV2NkwAT/GRgYGJGFUThQCRorAhmPFwyAm9DdgxEEAORECQlt3qIUAAAAAElFTkSuQmCC)
+		center center repeat;
 	position: absolute;
 	left: 50%;
 	top: 45%;
 	z-index: 1;
 	margin: -7px 0 0 -7px;
-	opacity: .5;
+	opacity: 0.5;
 	pointer-events: none;
 	transition: opacity 500ms;
 }
@@ -135,7 +125,7 @@ body.show-original #center {
 	font-family: Georgia, serif;
 	font-style: italic;
 	font-size: 12px;
-	opacity: .7;
+	opacity: 0.7;
 	transition: opacity 500ms;
 }
 #instructions::after {
@@ -153,22 +143,29 @@ body.show-original #center {
 	opacity: 0;
 }
 
-
-
 /**
  * About me
  */
 #about-me {
-	width: 300px;
+	/* width: 300px; */
 	position: absolute;
 	bottom: 30px;
-	left: 50%;
-	margin: 0 0 0 -150px;
+	left: 0;
+	width: 100%;
 	text-align: center;
+	padding: 0 30px;
+	box-sizing: border-box;
 }
-#about-me .name {
-	font-family: 'Playfair Display', serif;
-	font-size: 30px;
+#about-me h1.name {
+	/* font-family: 'Playfair Display', serif; */
+	/* font-family: 'Playfair Display SC', serif; */
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 32px;
+	line-height: 32px;
+	margin-top: 15px;
+	margin-bottom: 20px;
 }
 #about-me .subtitle {
 	font-size: 13px;
@@ -177,20 +174,20 @@ body.show-original #center {
 #about-me .subtitle .heart {
 	font-family: Georgia, serif;
 }
-#about-me .contact {
+#about-me .text-compact {
+	display: none;
+}
+#about-me .links {
 	position: relative;
 	z-index: 3;
-	color: rgba(0,0,0,.5);
-	transition: opacity 1000ms;
-	font-size: 13px;
+	color: rgba(0, 0, 0, 0.5);
 }
-#about-me.hide-contact .contact {
-	opacity: 0;
+#about-me .links a {
+	margin: 0 5px;
 }
-#settings.open + #about-me .contact {
+#settings.open + #about-me .links {
 	z-index: 0;
 }
-
 
 /**
  * Hide settings and about ui as you draw
@@ -203,5 +200,32 @@ body.show-original #center {
 #settings.hide,
 #about-me.hide {
 	pointer-events: none;
-	opacity: .1;
+	opacity: 0.1;
+}
+
+@media screen and (max-width: 565px) {
+	#about-me h1.name {
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+	#about-me .text-main {
+		display: none;
+	}
+	#about-me .text-compact {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	body {
+		font-size: 12px;
+		line-height: 14px;
+	}
+}
+
+@media (hover: hover) {
+	body a:hover,
+	body .link:hover {
+		color: #d70;
+	}
 }
